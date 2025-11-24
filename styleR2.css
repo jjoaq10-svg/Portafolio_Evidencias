@@ -1,0 +1,71 @@
+/* Define the keyframes for sliding animation */
+
+@keyframes slideAnimation {
+
+  from {
+
+    transform: translateX(-100%); /* Start off-screen to the left */
+    background-color: #f44336; /* Background color of the element at the star*/
+  }
+
+  to {
+
+    transform: translateX(0); /* End at the element's original position */
+  }
+
+}
+
+
+
+/* Apply the animation to your element */
+
+.sliding-element {
+
+  display: inline-block; /* or block, depending on your layout */
+
+  width: 200px; /* Width of the element */
+
+  height: 50px; /* Height of the element */
+
+  color: white; /* Text color */
+
+  background-color: #6f36f4;
+
+  text-align: center; /* Align text in the center */
+
+  line-height: 50px; /* Align text vertically */
+
+  position: relative; /* Required for the translateX function to work correctly */
+
+   
+
+  animation-name: slideAnimation; /* Reference the name of your keyframes */
+
+  animation-duration: 5s; /* Set the duration of one animation cycle */
+
+  animation-timing-function: ease-out; /* Start fast and decelerate smoothly */
+
+  animation-iteration-count: 1; /* Run the animation only once */
+
+}
+
+
+
+a:hover{
+    color: #f44336;
+}
+
+a:visited{
+    color: #6f36f4;
+}
+
+a:active{
+    color: white; /* Text color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* o row para horizontal */
+  gap: 20px;
+}
+

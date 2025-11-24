@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Mensaje inicial
+    alert("Bienvenido a las tablas de multiplicar");
+
+    // Pedir número al
+    let numero = parseInt(prompt("¿Qué número deseas multiplicar?"));
+    let veces = 10; // limite de la multiplicacion
+
+    // Mostrar tabla en el DOM
+    document.write("<table border= 1>");
+    for (let i = 1; i <= veces; i++) {
+        let res = numero * i;
+        let mensaje = `${numero} * ${i} = ${res}`;
+        document.write("<tr>");
+        document.write("<td>" + mensaje + "</td>");
+        document.write("</tr>");
+        
+        // También mostrar en consola
+        console.log(mensaje);
+    }
+    document.write("</table>");
+</script>
+
+</body>
+</html>
+<!--
+        //let veces = parseInt(prompt("¿Cuántas veces quieres que te salude?"));
+        //let mensaje = "";
+        //let numero2 = 0;
+        //for (let i = 0; i < 10; i++) {
+          //      mensaje + = `${numero * numero2} 🌟\n`;
+         //       numero2++;
+           // }
+        //alert(mensaje);
+         //la salida de este código va al dom 
+        //for (let i = 0; i < veces; i++) {
+          //      mensaje = `Hola, ${nombre}! 🌟\n`;
+            //    document.write("<p>"+mensaje+"</p>");
+            //}
+        //la salida de este código va al console.log
+        //for (let i = 0; i < veces; i++){
+          //  mensaje = `Hola, ${nombre}! 🌟\n`;
+             //   console.log(mensaje); // -> 70            
+        //    } -->
